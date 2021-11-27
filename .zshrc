@@ -95,7 +95,7 @@ zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-    history
+    vi-mode
     zsh-autosuggestions
     zsh-syntax-highlighting
     )
@@ -118,6 +118,11 @@ source $ZSH/oh-my-zsh.sh
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
+
+# vi-mode configs
+VI_MODE_SET_CURSOR=true
+MODE_INDICATOR="%F{yellow}+%f"
+#
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
