@@ -132,6 +132,7 @@ MODE_INDICATOR="%F{yellow}+%f"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias v='nvim'
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias env_dbt='source $HOME/Projects/airflow-dbt/dbt-env/bin/activate'
 
