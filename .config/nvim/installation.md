@@ -1,6 +1,12 @@
 # Install/Update neovim
+## Install
 ```
-brew install --HEAD neovim` or `brew reinstall neovim
+brew install --HEAD neovim
+```
+
+## Update
+```
+brew reinstall neovim
 ```
 
 # Install lazygit
