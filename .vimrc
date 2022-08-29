@@ -1,5 +1,6 @@
 set nocompatible
-let mapleader=","
+set mouse=a
+" let mapleader=","
 
 " ================================================================
 " vim-plug plugins
@@ -42,8 +43,10 @@ set laststatus=2
 " Enable highlighting of the current line
 set cursorline
 
-"Mode Settings
+" Enable folding
+set foldmethod=syntax
 
+" Cursor based on Mode Settings
 let &t_SI.="\e[5 q" "SI = INSERT mode
 let &t_SR.="\e[4 q" "SR = REPLACE mode
 let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
@@ -78,7 +81,7 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 " NERDTREE configs
 " ================================================================
 " keymaps
-nnoremap <leader>n :NERDTreeFocus<CR>
+" nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 " nnoremap <C-f> :NERDTreeFind<CR>
