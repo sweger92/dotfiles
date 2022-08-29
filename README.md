@@ -1,15 +1,22 @@
 # Install your dotfiles on a new system, or migrate to this setup
-1.   `echo ".cfg" >> .gitignore`
+## Step 1
+```
+echo ".cfg" >> .gitignore
+```
 
 There could be weird behaviour if `.cfg` tries to track itself. Avoid recursive issues by adding `.cfg` to your global Git ignore.
 
- 
-2.   `git clone <remote-git-repo-url> $HOME/.cfg`
+## Step 2
+```
+git clone <remote-git-repo-url> $HOME/.cfg
+```
 
 Add a `--bare` flag if you wish you use a bare repo
 
- 
-3.   `alias config='/usr/bin/git --git-dir=<path to .cfg’s Git directory> --work-tree=$HOME'`
+## Step 3
+```
+alias config='/usr/bin/git --git-dir=<path to .cfg’s Git directory> --work-tree=$HOME'
+```
 
 Set up an alias to send Git commands to `.cfg,` and also set $HOME as the work tree, while storing the Git state at `.cfg`
 
@@ -17,19 +24,26 @@ For a bare repo, the path to the Git directory is at the top level of the projec
 
 For a non-bare default repo, the path to the Git directory is inside a .git subdirectory: `$HOME/.cfg/.git`
 
- 
-4.   `config config --local status.showUntrackedFiles no`
+## Step 4
+```
+config config --local status.showUntrackedFiles no
+```
 
 Set a local configuration in `.cfg` to ignore untracked files.
 
- 
-5.   `config checkout`
+## Step 5
+```
+config checkout
+```
 
 Checkout the actual content from your `.cfg` repository to $HOME. Git pulls the tracked files out of the compressed database in the Git directory and places them in the work tree.
 
 E.g if you added `$HOME/.zsh/aliases` to `.cfg,` that file will be instantiated at that path on your new computer. Ta Da!
 
 `config checkout` might fail with a message like:
+```
+error: The following untracked working tree files would be overwritten by checkout: ...
+```
 
 Files on your computer might have identical locations and names to files in the `.cfg` repo. Git doesn’t want to overwrite your local files.
 
