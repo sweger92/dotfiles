@@ -133,14 +133,21 @@ MODE_INDICATOR="%F{yellow}+%f"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias v='nvim'
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias v="nvim"
+alias lg="lazygit"
+alias t='tmux attach || tmux new-session' # Attaches tmux to the last session; creates a new session if none exists.
 alias env_dbt='source $HOME/Projects/airflow-dbt/dbt-env/bin/activate'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+alias ta='tmux attach -t' # Attaches tmux to a session (example: ta portal)
+alias tn='tmux new -s' # Creates a new session
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# for dotfile management
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias lg_config="lazygit -g $HOME/.cfg -w $HOME"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
