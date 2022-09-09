@@ -36,6 +36,9 @@ keymap("n", "<leader><leader>", ":Telescope file_browser<CR>", opts)
 -- terminal --
 keymap("n", "<leader>g", ":lua _LAZYGIT_TOGGLE()<CR>", opts)
 
+-- iron.nvim --
+keymap("n", "<leader>i", ":IronRepl<CR>", opts)
+
 -- -- neoterm --
 -- -- escape insert mode in terminal
 -- keymap("t", "<Esc>", "<C-><C-n>", opts)

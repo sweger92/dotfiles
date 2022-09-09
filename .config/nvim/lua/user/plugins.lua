@@ -94,6 +94,9 @@ return packer.startup(function(use)
 	-- mini plugins
 	use({ "echasnovski/mini.nvim", branch = "stable" })
 
+    -- python repl
+    use {'hkupty/iron.nvim'}
+
 	-- use 'itchyny/lightline.vim'
 
 	-- -- file explorer
