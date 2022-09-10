@@ -42,7 +42,10 @@ return packer.startup(function(use)
 	use("lewis6991/gitsigns.nvim")
 
 	-- colorscheme
-	use("morhetz/gruvbox")
+    use("sainnhe/gruvbox-material")
+    use("sainnhe/everforest")
+    use("sainnhe/edge")
+    use("sainnhe/sonokai")
 
 	-- cmp plugins
 	use("hrsh7th/nvim-cmp") -- The completion plugin
