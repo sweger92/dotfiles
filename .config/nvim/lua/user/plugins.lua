@@ -114,7 +114,7 @@ return packer.startup(function(use)
 	--     branch = 'release'
 	-- }
 
-	-- use 'tpope/vim-fugitive'
+	use 'tpope/vim-fugitive'
 	-- use 'tpope/vim-surround'
 	-- use 'tpope/vim-commentary'
 	-- use 'tpope/vim-unimpaired'
