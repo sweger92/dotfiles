@@ -15,7 +15,7 @@ null_ls.setup {
         formatting.black.with { extra_args = { "--fast" } },
         -- formatting.yapf,
         formatting.stylua,
-        diagnostics.flake8,
+        diagnostics.flake8.with {extra_args = {"--ignore=E501"}},
         null_ls.builtins.code_actions.gitsigns,
     },
 }
