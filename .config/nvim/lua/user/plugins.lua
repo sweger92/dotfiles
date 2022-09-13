@@ -63,8 +63,11 @@ return packer.startup(function(use)
 	use("williamboman/mason.nvim") -- LSP, DAP, linter, & formatter installation
 	use("williamboman/mason-lspconfig.nvim") -- integrates mason with nvim-lspconfig
 	use("neovim/nvim-lspconfig") -- Configurations for Nvim LSP
-	use("mfussenegger/nvim-dap") -- DAP
 	use("jose-elias-alvarez/null-ls.nvim") -- linting and formatting
+
+    -- DAP
+	use("mfussenegger/nvim-dap")
+    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
 
 	-- Treesitter
 	use({
