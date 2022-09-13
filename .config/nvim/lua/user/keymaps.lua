@@ -27,10 +27,27 @@ keymap("v", ">", ">gv", opts)
 -- keymap("n", "<C-t>", ":NERDTreeToggle<CR>", opts)
 -- keymap("n", "<C-t>", ":NvimTreeToggle<CR>", opts)
 
+local whichkey = require "which-key"
+
 -- Telescope
-keymap("n", "<leader>fg", ":Telescope git_files<CR>", opts)
-keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts)
-keymap("n", "<leader>ff", ":Telescope find_files<CR>", opts)
+local telescope_keymap = {
+	f = {
+		name = "Telescope",
+		g = { "<cmd>Telescope git_files<CR>", "Find Git File" },
+		b = { "<cmd>Telescope buffers<CR>", "Find Buffer" },
+		f = { "<cmd>Telescope find_files<CR>", "Find File" },
+	},
+}
+
+whichkey.register(telescope_keymap, {
+	mode = "n",
+	prefix = "<leader>",
+	buffer = nil,
+	silent = true,
+	noremap = true,
+	nowait = false,
+})
+
 keymap("n", "<leader><leader>", ":Telescope file_browser<CR>", opts)
 
 -- terminal --
