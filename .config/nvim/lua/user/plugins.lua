@@ -115,36 +115,9 @@ return packer.startup(function(use)
       end
     }
 
-	-- use 'itchyny/lightline.vim'
-
-	-- -- file explorer
-	-- use 'scrooloose/nerdtree'
-
-	-- -- fuzzy finder
-	-- use {
-	--     'junegunn/fzf',
-	--     run = 'call fzf#install()'
-	-- }
-	-- use 'junegunn/fzf.vim'
-
-	-- use {
-	--     'neoclide/coc.nvim',
-	--     branch = 'release'
-	-- }
-
 	use 'tpope/vim-fugitive'
-	-- use 'tpope/vim-surround'
-	-- use 'tpope/vim-commentary'
-	-- use 'tpope/vim-unimpaired'
-	-- use 'tpope/vim-repeat'
-	-- use 'kassio/neoterm'
+
 	-- use 'vimwiki/vimwiki'
-	-- use {
-	--     'windwp/nvim-autopairs',
-	--     config = function()
-	--         require('nvim-autopairs').setup {}
-	--     end
-	-- }
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
